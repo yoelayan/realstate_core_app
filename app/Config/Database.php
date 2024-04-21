@@ -24,31 +24,30 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public array $default = [
-        'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
-        'DBPrefix'     => '',
-        'pConnect'     => false,
-        'DBDebug'      => true,
-        'charset'      => 'utf8mb4',
-        'DBCollat'     => 'utf8mb4_general_ci',
-        'swapPre'      => '',
-        'encrypt'      => false,
-        'compress'     => false,
-        'strictOn'     => false,
-        'failover'     => [],
-        'port'         => 3306,
-        'numberNative' => false,
-        'dateFormat'   => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],
-    ];
+    public $default = [
+		'DSN'      => 'pgsql:host=localhost;port=5432;dbname=realstate_core_app;user=postgres;password=123456',
+		//'DSN'      => '',
+		'hostname' => 'localhost',
+		'username' => '',
+		'password' => '',
+		'database' => 'realstate_core_app',
+		'DBDriver' => 'Postgre',
+		'DBPrefix' => '',
+		'pConnect' => false,
+		'DBDebug'  => (ENVIRONMENT !== 'production'),
+		'cacheOn'  => false,
+		'cacheDir' => '',
+		/*'charset'  => 'latin1',
+		'DBCollat' => 'latin1_swedish_ci',*/
+		'charset'  => 'utf8',
+		'DBCollat' => 'utf8_general_ci',
+		'swapPre'  => '',
+		'encrypt'  => false,
+		'compress' => false,
+		'strictOn' => false,
+		'failover' => [],
+		'port'     => 5432,
+	];
 
     //    /**
     //     * Sample database connection for SQLite3.
